@@ -5,3 +5,5 @@ data/raw/
 data/processed/
 *.egg-info/
 dist/
+run_all.sh
+run_all.sh
