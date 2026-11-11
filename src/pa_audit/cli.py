@@ -27,6 +27,11 @@ def main():
     p_batch.add_argument("--ra", default="RA7")
     p_batch.add_argument("--ledger")
 
+    p_report = sub.add_parser("report", help="Generate HTML report from ledger")
+    p_report.add_argument("ledger")
+    p_report.add_argument("--ra", default="RA7")
+    p_report.add_argument("--output", default="report/executive_summary.html")
+
     sub.add_parser("init", help="Create sample fixtures")
 
     args = parser.parse_args()
@@ -37,6 +42,10 @@ def main():
         _run_audit(args)
     elif args.command == "batch":
         _run_batch(args)
+    elif args.command == "report":
+        from pa_audit.report.generator import generate
+        from pa_audit.pa.rating_areas import get_multiplier
+        generate(Path(args.ledger), Path(args.output), args.ra, get_multiplier(args.ra))
     else:
         parser.print_help()
 
