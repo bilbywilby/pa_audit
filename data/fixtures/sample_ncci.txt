@@ -1,0 +1,3 @@
+Column1Code	Column2Code	EffectiveDate	DeletionDate	ModifierIndicator
+99214	72148	20260101		0
+45378	93000	20260101		1

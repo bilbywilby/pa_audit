@@ -1,0 +1,6 @@
+cpt_code,description,non_facility_price,facility_price
+99214,Office visit est med 25min,130.00,95.00
+99215,Office visit est med 30min,175.00,125.00
+72148,MRI lumbar w/o contrast,350.00,275.00
+45378,Diagnostic colonoscopy,600.00,450.00
+93000,EKG routine,45.00,30.00
